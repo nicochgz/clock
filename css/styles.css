@@ -1,0 +1,294 @@
+body{
+    /*background: rgb(0,4,102);
+    background: linear-gradient(186deg, rgb(0, 2, 69) 0%, rgba(13,0,102,1) 42%, rgba(47,0,124,1) 100%);*/
+    background: rgb(112,0,119);
+    background: radial-gradient(circle, rgba(112,0,119,1) 0%, rgba(66,0,175,1) 47%, rgba(0,13,78,1) 100%);
+    background-attachment: fixed;
+    /*background-image: url(../Abstract-03.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;*/
+}
+#reloj{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 60px;
+    text-shadow: 0px 0px 8px rgba(189, 189, 189, 0.5);
+    color: white;
+}
+.reloj-contenedor{ 
+    padding: 55px;
+    max-width: 450px;
+    text-align: center;
+    margin: 15% auto;
+    color: rgb(220, 220, 220);
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 30px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );  
+    transition: all .8s;  
+}
+.reloj-contenedor:hover{
+    transform: scale(1.1);
+    transition: all .8s;
+}
+#hora{
+    letter-spacing: 5px;
+    font-size: 100px;
+    padding: 0 25px;    
+}
+#fecha{
+    letter-spacing: 10px;
+    font-size: 30px;
+    padding-top: 5px;
+}
+/*.animarHora{
+    transform: rotate3d(1, 0, 0, 360deg);
+    transition: all .5s;
+}*/
+
+.clock{
+    height: 520px;
+    width: 520px;
+    background: rgba( 255, 255, 255, 0.15 );
+    /*box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);*/
+    box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 50%;
+    border: 2px solid rgba( 255, 255, 255, 0.18 ); 
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all .8s;
+    display: none;
+}
+.clock:hover{
+    transform: scale(1.05);
+    transition: all .8s;
+}
+img{
+    opacity: 0.6;
+    height: 520px;
+    width: 520px;
+}
+.manecilla{
+    position: absolute;
+    background-color: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur(20px);
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    transform-origin: bottom;    
+    box-shadow: 0px 0px 15px 5px rgba(216, 216, 216, 0.20);
+}
+.hor_{
+    height: 90px;
+    width: 10px;
+    top: 170px;    
+}
+.min_{
+    height: 110px;
+    width: 5px;
+    top: 150px;
+}
+.seg_{
+    height: 130px;
+    width: 3px;
+    top: 128px;
+}
+
+#cambiar{
+    color: rgb(220, 220, 220);
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    position: absolute;
+    margin: 0 auto;
+    top: 10%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;   
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 23px;
+    transition: all .5s;
+    text-shadow: 0px 0px 8px rgba(189, 189, 189, 0.5);
+}
+#cambiar:hover{
+    transform: scale(1.1);
+    transition: all .5s;
+}
+#cambiar:focus{
+    background: rgba(181, 181, 181, 0.35);
+    transition: all .2s;
+}
+
+
+.dec1{
+    position: absolute;
+    margin: 0 auto;
+    top: 45%;
+    bottom: 0;
+    right: 30%;
+    left: 0;
+    z-index: -1; 
+    width: 270px;
+    height: 270px;
+    background: rgb(210,0,208);
+    background: radial-gradient(circle, rgba(210,0,208,1) 28%, rgba(140,0,196,1) 82%, rgba(115,0,129,1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 0 rgba(18, 20, 56, 0.37); 
+    border: 1px solid rgba( 255, 255, 255, 0.08); 
+}
+.dec2{
+    position: absolute;
+    margin: 0 auto;
+    top: 19%;
+    bottom: 0;
+    right: 0;
+    left: 20%;
+    z-index: 3; 
+    width: 120px;
+    height: 120px;
+    background: rgb(210,0,208);
+    background: radial-gradient(circle, rgba(210,0,208,1) 28%, rgba(140,0,196,1) 82%, rgba(115,0,129,1) 100%);
+    border-radius: 50%;   
+    box-shadow: 0 8px 32px 0 rgba(18, 20, 56, 0.37);  
+    border: 1px solid rgba( 255, 255, 255, 0.08);
+}
+.dec3{
+    position: absolute;
+    margin: 0 auto;
+    top: 45%;
+    bottom: 0;
+    right: 0;
+    left: 28%;
+    z-index: -1; 
+    width: 80px;
+    height: 80px;
+    background: rgb(210,0,208);
+    background: radial-gradient(circle, rgba(210,0,208,1) 28%, rgba(140,0,196,1) 82%, rgba(115,0,129,1) 100%);
+    border-radius: 50%;   
+    box-shadow: 0 8px 32px 0 rgba(18, 20, 56, 0.37);  
+    border: 1px solid rgba( 255, 255, 255, 0.08);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #reloj{
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        font-size: 40px;
+        text-shadow: 0px 0px 8px rgba(189, 189, 189, 0.5);
+        color: white;
+    }
+    .reloj-contenedor{ 
+        padding: 35px;
+        max-width: 250px;
+        text-align: center;
+        margin: 45% auto;
+        color: rgb(220, 220, 220);
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+        border-radius: 30px;
+        border: 2px solid rgba( 255, 255, 255, 0.18 );  
+        transition: all .8s;  
+    }
+    .reloj-contenedor:hover{
+        transform: scale(1.1);
+        transition: all .8s;
+    }
+    #hora{
+        letter-spacing: 5px;
+        font-size: 50px;
+        padding: 0 25px;    
+    }
+    #fecha{
+        letter-spacing: 10px;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+
+    .clock{
+        height: 350px;
+        width: 350px;
+        background: rgba( 255, 255, 255, 0.15 );
+        box-shadow: 0 8px 32px 0 rgba(89, 96, 204, 0.37);
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+        border-radius: 50%;
+        border: 2px solid rgba( 255, 255, 255, 0.18 ); 
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: all .8s;
+        display: none;
+    }
+    img{
+        opacity: 0.6;
+        height: 350px;
+        width: 350px;
+    }
+    .manecilla{
+        position: absolute;
+        background-color: rgba( 255, 255, 255, 0.2 );
+        backdrop-filter: blur(20px);
+        margin: auto;
+        top: 0;
+        bottom: 64.8%;
+        right: 0;
+        left: 0;
+        border-radius: 5px;
+        transform-origin: bottom;    
+        box-shadow: 0px 0px 15px 5px rgba(216, 216, 216, 0.20);
+    }
+    .hor_{
+        height: 60px;
+        width: 10px;
+        top: 170px;    
+    }
+    .min_{
+        height: 80px;
+        width: 5px;
+        top: 150px;
+    }
+    .seg_{
+        height: 100px;
+        width: 3px;
+        top: 128px;
+    }  
+    
+    
+    .dec2{
+        position: absolute;
+        margin: 0 auto;
+        top: 19%;
+        bottom: 0;
+        right: 0;
+        left: 20%;
+        z-index: -1; 
+        width: 120px;
+        height: 120px;
+        background: rgb(210,0,208);
+        background: radial-gradient(circle, rgba(210,0,208,1) 28%, rgba(140,0,196,1) 82%, rgba(115,0,129,1) 100%);
+        border-radius: 50%;   
+        box-shadow: 0 8px 32px 0 rgba(18, 20, 56, 0.37);  
+        border: 1px solid rgba( 255, 255, 255, 0.08);
+    }
+}
